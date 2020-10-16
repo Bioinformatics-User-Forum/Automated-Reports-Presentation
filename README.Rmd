@@ -3,8 +3,7 @@ title: "Introduction to using Rmarkdown for automated reports"
 author: "Randy Johnson"
 date: "`r format(Sys.Date(), '%d %B, %Y')`"
 output: 
-    word_document:
-        fig_caption: true
+    md_document
 ---
 
 ```{r setup, include=FALSE}
@@ -286,3 +285,5 @@ for(i in 2:nf)
     
 fig
 ```
+
+Now that we have the Rmd file set up, all we have to do is knit the document and our code will fetch new results, generate new figures and tables, and put them all together in a new document. You can check out the repository to review the code [here]([https://github.com/Bioinformatics-User-Forum/Automated-Reports-Presentation).](https://github.com/Bioinformatics-User-Forum/Automated-Reports-Presentation).) If you do, you'll also see the same report knitted as a markdown file. All it takes to knit an Rmd file into a different format is the modification of a few lines in the yaml header - usually. There are some format specific things you can do that won't gracefully translate over to other formats.
