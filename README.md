@@ -198,7 +198,7 @@ Now that we have the Rmd file set up, all we have to do is knit the
 document and our code will fetch new results, generate new figures and
 tables, and put them all together in a new document. You can check out
 the repository to review the code
-[here](%5Bhttps://github.com/Bioinformatics-User-Forum/Automated-Reports-Presentation).\](<a href="https://github.com/Bioinformatics-User-Forum/Automated-Reports-Presentation" class="uri">https://github.com/Bioinformatics-User-Forum/Automated-Reports-Presentation</a>).)
+[here](https://github.com/Bioinformatics-User-Forum/Automated-Reports-Presentation).
 If you do, you’ll also see the same report knitted as a markdown file.
 All it takes to knit an Rmd file into a different format is the
 modification of a few lines in the yaml header - usually. There are some
