@@ -3,7 +3,8 @@ title: "Introduction to using Rmarkdown for automated reports"
 author: "Randy Johnson"
 date: "`r format(Sys.Date(), '%d %B, %Y')`"
 output: 
-    md_document
+    word_document:
+        fig_caption: true
 ---
 
 ```{r setup, include=FALSE}
@@ -141,6 +142,10 @@ In this short report, we will be using the [sars2pack](https://seandavi.github.i
 Lets start with a simple figure showing the cumulative number of cases in the US between the end of January and today (Figure 1), and then we'll take a look at the cumulative number of cases by state for one week ago (Figure 2).
 
 ```{r US total cases, fig.cap='Figure 1. Cumulative number of COVID19 cases in the US between Jan 22 and the present date'}
+
+# See this tutorial for a general introduction to ggplot2:
+# https://r-statistics.co/Complete-Ggplot2-Tutorial-Part1-With-R-Code.html
+
 
 filter(jhu_us, subset == 'confirmed') %>%
     ggplot(aes(date, count/1e6)) +
@@ -286,4 +291,4 @@ for(i in 2:nf)
 fig
 ```
 
-Now that we have the Rmd file set up, all we have to do is knit the document and our code will fetch new results, generate new figures and tables, and put them all together in a new document. You can check out the repository to review the code [here]([https://github.com/Bioinformatics-User-Forum/Automated-Reports-Presentation).](https://github.com/Bioinformatics-User-Forum/Automated-Reports-Presentation).) If you do, you'll also see the same report knitted as a markdown file. All it takes to knit an Rmd file into a different format is the modification of a few lines in the yaml header - usually. There are some format specific things you can do that won't gracefully translate over to other formats.
+Now that we have the Rmd file set up, all we have to do is knit the document and our code will fetch new results, generate new figures and tables, and put them all together in a new document. You can check out the repository to review the code [here](https://github.com/Bioinformatics-User-Forum/Automated-Reports-Presentation). If you do, you'll also see the same report knitted as a markdown file. All it takes to knit an Rmd file into a different format is the modification of a few lines in the yaml header - usually. There are some format specific things you can do that won't gracefully translate over to other formats.
