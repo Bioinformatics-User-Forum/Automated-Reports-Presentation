@@ -11,6 +11,9 @@ output:
 knitr::opts_chunk$set(echo = FALSE, dpi=300, fig.width=7, fig.height=3.25)
 knitr::opts_knit$set(eval.after = 'fig.cap')
 
+# if you like the Visual Markdown Editor, and you don't have a copy of RStudio 1.4+:
+# https://blog.rstudio.com/2020/09/30/rstudio-v1-4-preview-visual-markdown-editing/
+
 # load required packages
 library(tools)
 library(knitr)
